@@ -9,7 +9,7 @@ const DEFAULT_TIME_LIMIT = 10;
 const app = express();
 
 const authorizer = (username: string, password: string) => {
-  return username === 'admin' && password === 'admin';
+    return username === (process.env.USERNAME || 'admin') && password === (process.env.PASSWORD || 'admin');
 };
 
 app.use(expressBasicAuth({ authorizer, challenge: true }));

@@ -4,7 +4,7 @@ COPY . /app/
 
 WORKDIR /app/
 
-RUN npm install forever -g && yarn
+RUN npm install forever -g && yarn && yarn run tsc
 
 COPY ./bootstrap.sh .
 
