@@ -118,8 +118,9 @@ const getTimeRemainingSeconds = () => {
 };
 
 const addEntry = (data: AddEntryRequest): { entry?: Partial<Entry>, err?: string } => {
-
-  console.log(data);
+  console.log(`\nSUBMISSION
+  ${data.email} from team ${data.team} just submitted:
+  ${data.answer}\n`);
 
   const createKey = () => {
     return (Math.round(Math.random() * 100000000000)).toString(36);

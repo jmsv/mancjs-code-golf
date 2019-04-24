@@ -5,7 +5,8 @@
   "main": "mancjs-golf.js",
   "scripts": {
     "start": "ts-node src",
-    "test": "mocha --require ts-node/register src/test/*.spec.ts"
+    "test": "mocha --require ts-node/register src/test/*.spec.ts",
+    "reset": "rimraf data/game.json"
   },
   "author": "Martin Rue",
   "license": "BSD-2-Clause",
@@ -16,6 +17,7 @@
     "@types/multiparty": "^0.0.31",
     "@types/node": "^8.0.0",
     "body-parser": "^1.18.2",
+    "dotenv": "^7.0.0",
     "express": "^4.16.3",
     "express-basic-auth": "^1.1.5",
     "jsmin": "~1.0.1",
@@ -29,6 +31,7 @@
     "@types/mocha": "^5.2.0",
     "chai": "^4.1.2",
     "mocha": "^5.1.1",
+    "rimraf": "^2.6.3",
     "ts-node": "^6.0.2",
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "^5.8.0",

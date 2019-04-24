@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import path = require('path');
 import express = require('express');
 import bodyParser = require('body-parser');
